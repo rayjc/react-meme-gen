@@ -1,0 +1,10 @@
+.MemeWrapper button {
+    padding: 1rem;
+    /* margin-top: 0; */
+    margin-bottom: 1rem;
+}
+
+.MemeWrapper hr {
+    width: 50%;
+    margin-bottom: 5%;
+}

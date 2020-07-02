@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import { useSelector } from "react-redux";
 import './App.css';
+import MemeForm from './MemeForm';
+import Meme from './Meme';
+import MemeWrapper from './MemeWrapper';
 
 function App() {
+  const memes = useSelector(store => store.memes);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <MemeForm />
       </header>
+      {memes.map(m =>
+        <MemeWrapper key={m.name}>
+          <Meme {...m} />
+        </MemeWrapper>
+      )}
     </div>
   );
 }

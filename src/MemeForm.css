@@ -1,0 +1,13 @@
+.MemeForm input {
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 30%;
+}
+
+.MemeForm button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+}
